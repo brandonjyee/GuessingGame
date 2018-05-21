@@ -3,33 +3,20 @@
   <head>
     <title>Guessing Game</title>
 
-    <!-- Bootstrap and CSS here-->
-    <style>
-      .center {
-        text-align: center;
-      }
-      ul {
-          list-style: none;
-          padding: 0;
-      }
-      img {
-          display: inline;
-          width: 200px;
-          height: 100px;
-      }
-      #footer {
-          width: 100%;
-          border-top: solid 2px black;
-          background-color: white;
-          position: fixed;
-          bottom: 0;
-      }
-    </style>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+     <!-- Bootstrap -->
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+     <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+     <![endif]-->
   </head>
   <body>
 
-      <div id='app'>
+      <div id='app' class='center container'>
 
         <div id='headers'>
           <!-- Title and subtitles! -->
@@ -40,42 +27,42 @@
         <div id='main'>
           <div id='input-parent'>
             <!-- Player's guess input, and submit button -->
-            <input placeholder='#' maxlength='3' autofocus=autofocus></input>
-            <button>Go!</button>
+            <input id='player-input' class='center' placeholder='#' maxlength='3' autofocus=autofocus></input>
+            <button id='submit' class='btn btn-success'>Go!</button>
           </div>
 
           <div id='guesses'>
             <!-- unordered list of guesses -->
-            <ul>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
+            <ul id='guess-list'>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
             </ul>
           </div>
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
-            <button>Reset</button>
-            <button>Hint</button>
+            <button id='reset' class='btn btn-warning'>Reset</button>
+            <button id='hint' class='btn btn-info'>Hint</button>
           </div>
         </div>
       </div>
 
 
 
-    <div id='footer'>
-        <div>
-          <div class=''>
+    <div id='footer' class='center'>
+        <div class='row'>
+          <div class='col-sm-4'>
             <img src='fa-logo@2x.png'></img>
           </div>
 
-          <div class=''>
-            <h4>Project by YOUR NAME HERE</h4>
+          <div class='col-sm-4'>
+            <h4>Project by Brandon Yee</h4>
           </div>
 
-          <div class=''>
+          <div class='col-sm-4'>
             <img src='grace_hopper_academy.png'></img>
           </div>
 
@@ -83,5 +70,9 @@
         </div>
     </div>
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
